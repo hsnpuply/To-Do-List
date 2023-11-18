@@ -16,14 +16,19 @@ function addTask(){
     }
     inputBox.value=''
     saveData();
+
+
 }
 
-
+listContainer.addEventListener('dblclick',(e)=>{
+    if(e.target.tagName ==="LI"){
+        e.target.remove();
+    }
+})
 listContainer.addEventListener("click",(e)=>{
     if(e.target.tagName==="LI"){
         e.target.classList.toggle("checked")
         saveData();
-
     }else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
         saveData();

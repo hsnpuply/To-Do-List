@@ -1,6 +1,10 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
 
+  @font-face {
+    font-family: 'bNazanin';
+    src: url(fonts/B-NAZANIN.TTF);
+  }
 *{
     margin: 0;
     padding: 0;
@@ -118,4 +122,19 @@ ul li span:hover{
     border: 2px solid #b8b5b5;
     color: #fff;
     border-radius: 50%;
+}
+
+h4,h4 span{
+    font-family: 'bNazanin';
+    text-align: end;
+    margin-top: 1.2rem;
+    font-size: 22px;
+    color: #153677;
+    user-select: none;
+}
+
+h4 span{
+    color: #ff5100da;
+    font-size: 24px;
+    border-bottom: 3px solid #ff5100da;
 }
