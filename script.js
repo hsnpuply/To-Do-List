@@ -16,6 +16,7 @@ function addTask(){
     }
     inputBox.value=''
     saveData();
+    inputBox.focus();
 
 
 }
@@ -23,14 +24,18 @@ function addTask(){
 listContainer.addEventListener('dblclick',(e)=>{
     if(e.target.tagName ==="LI"){
         e.target.remove();
+    inputBox.focus();
+        saveData();
     }
 })
 listContainer.addEventListener("click",(e)=>{
     if(e.target.tagName==="LI"){
         e.target.classList.toggle("checked")
+        inputBox.focus();
         saveData();
     }else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
+        inputBox.focus();
         saveData();
     }
 },false)
@@ -44,5 +49,12 @@ function saveData(){
 function showTask(){
     listContainer.innerHTML = localStorage.getItem("data")
 }
+
+
+inputBox.addEventListener("keyup",(e)=>{
+    if(e.key === "Enter"){
+        addTask();
+    }
+})
 
 showTask();
