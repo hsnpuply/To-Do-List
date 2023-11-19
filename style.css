@@ -59,6 +59,7 @@ input{
     padding: 1rem;
     font-weight: 600    ;
     font-size: 1.2rem;
+
 }
 
 button{
@@ -79,6 +80,8 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
+    text-transform: capitalize;
+
 
 }
 
@@ -93,13 +96,21 @@ ul li::before{
     background-position: center;
     top: 12px;
     left: 1px;
-
 }
 
-ul li.checked{
+
+.checked{
     color: #555;
     text-decoration: line-through;
 }
+
+
+.task_done{
+    text-align: start;
+    font-size: 20px;
+    color: #002765;
+}
+
 
 ul li.checked::before{
     background-image: url(images/checked.jpg);
@@ -123,6 +134,7 @@ ul li span:hover{
     color: #fff;
     border-radius: 50%;
 }
+
 
 h4,h4 span{
     font-family: 'bNazanin';
