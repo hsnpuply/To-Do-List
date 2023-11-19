@@ -41,6 +41,7 @@ listContainer.addEventListener('dblclick',(e)=>{
 });
 
 listContainer.addEventListener("click",(e)=>{
+ 
     inputBox.focus();
 
     if(e.target.tagName==="LI"){
